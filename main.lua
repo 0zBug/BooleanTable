@@ -25,7 +25,7 @@ function BooleanTable.Decode(Number, Length, Reverse)
 		local Exp = 2 ^ (Index - 1)
 		local Value = Number > Exp
 
-		Table[Index] = not Value
+		Table[Index] = Reverse and not Value or Value
 		
 		if Value then
 			Number = Number - Exp
